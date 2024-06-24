@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeekPlay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <button class="close-sidebar">&times;</button>
+        <!-- Add this line -->
+        <div class="logo">
+          <h1>GEEKPLAY</h1>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="active"
+                ><img src="images/icons8-home-50.png" alt="" /> Home</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icons8-help-50.png" alt="" /> Browse</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icons8-upload-48.png" alt="" /> Your
+                Uploads</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icons8-activity-feed-48.png" alt="" />
+                Activity</a
+              >
+            </li>
+            <li class="spacer"></li>
+            <!-- Add spacer here -->
+            <li>
+              <a href="#"
+                ><img src="images/icons8-settings-50.png" alt="" /> Settings</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icons8-help-50.png" alt="" /> Help</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="logout">Log Out</a>
+      </aside>
+
+      <main class="main-content">
+        <header>
+            <button class="hamburger-menu">&#9776;</button>
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button class="filter-btn"></button>
+            </div>
+            <div class="user-actions">
+                <button>New Video</button>
+                <div class="user-avatar"></div>
+            </div>
+        </header>
+        <section class="filters">
+          <button class="filter-btn" data-genre-id="28">All</button>
+          <button class="filter-btn" data-genre-id="28">Action</button>
+          <button class="filter-btn" data-genre-id="35">Comedy</button>
+          <button class="filter-btn" data-genre-id="18">Drama</button>
+          <button class="filter-btn" data-genre-id="878">Sci-Fi</button>
+          <button class="filter-btn" data-genre-id="14">Fantasy</button>
+          <button class="filter-btn" data-genre-id="53">Thriller</button>
+          <button class="filter-btn" data-genre-id="27">Horror</button>
+        </section>
+        <section class="content">
+          <!-- Recently Added Section -->
+          <div class="section-header"></div>
+          <div class="row" id="recently-added-section">
+            <div class="header">
+              <h3 class="title">Recently Added</h3>
+              <div class="progress-bar">
+                <div class="progress-item active"></div>
+                <div class="progress-item"></div>
+                <div class="progress-item"></div>
+                <div class="progress-item"></div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <button class="handle left-handle">
+                <div class="text">&#8249;</div>
+              </button>
+              <div class="slider" id="search-results">
+                <img src="https://via.placeholder.com/210/00FF00?text=1" />
+                <img src="https://via.placeholder.com/220/00FF00?text=2" />
+                <img src="https://via.placeholder.com/230/00FF00?text=3" />
+                <img src="https://via.placeholder.com/240/00FF00?text=4" />
+                <img src="https://via.placeholder.com/250/00FF00?text=5" />
+                <img src="https://via.placeholder.com/260/00FF00?text=6" />
+                <img src="https://via.placeholder.com/270/00FF00?text=7" />
+                <img src="https://via.placeholder.com/280/00FF00?text=8" />
+                <img src="https://via.placeholder.com/250/00FF00?text=9" />
+              </div>
+              <button class="handle right-handle">&#8250;</button>
+            </div>
+          </div>
+          <!-- Trending Section -->
+          <div class="section-header"></div>
+          <div class="row" id="trending-section">
+            <div class="header">
+              <h3 class="title">Trending</h3>
+              <div class="progress-bar">
+                <div class="progress-item active"></div>
+                <div class="progress-item"></div>
+                <div class="progress-item"></div>
+                <div class="progress-item"></div>
+              </div>
+            </div>
+            <div class="slider-container">
+              <button class="handle left-handle">
+                <div class="text">&#8249;</div>
+              </button>
+              <div class="slider" id="search-result">
+                <img src="https://via.placeholder.com/210/00FF00?text=1" />
+                <img src="https://via.placeholder.com/220/00FF00?text=2" />
+                <img src="https://via.placeholder.com/230/00FF00?text=3" />
+                <img src="https://via.placeholder.com/240/00FF00?text=4" />
+                <img src="https://via.placeholder.com/250/00FF00?text=5" />
+                <img src="https://via.placeholder.com/260/00FF00?text=6" />
+                <img src="https://via.placeholder.com/270/00FF00?text=7" />
+                <img src="https://via.placeholder.com/280/00FF00?text=8" />
+                <img src="https://via.placeholder.com/250/00FF00?text=9" />
+              </div>
+              <button class="handle right-handle">&#8250;</button>
+            </div>
+          </div>
+          <!-- Genres Section -->
+          <div class="section-header">
+            <h2>Genres</h2>
+          </div>
+          <div class="genres-container">
+            <div class="genres">
+              <div class="genre-card">
+                <img src="images/icons8-action-50.png" alt="Action" />
+                <div>
+                  <h3>Action</h3>
+                  <p>2,600+ Movies & Shows</p>
+                  <a href="#">View More</a>
+                </div>
+              </div>
+              <div class="genre-card">
+                <img src="images/icons8-comedy-50.png" alt="Comedy" />
+                <div>
+                  <h3>Comedy</h3>
+                  <p>1,800+ Movies & Shows</p>
+                  <a href="#">View More</a>
+                </div>
+              </div>
+              <div class="genre-card">
+                <img src="images/icons8-magic-50.png" alt="Fantasy" />
+                <div>
+                  <h3>Fantasy</h3>
+                  <p>1,200+ Movies & Shows</p>
+                  <a href="#">View More</a>
+                </div>
+              </div>
+              <!-- Add more genre cards as needed -->
+            </div>
+          </div>
+          <!-- Upload New Video Section -->
+          <h2 class="upload-title">Upload New Video</h2>
+          <div class="upload-section">
+            <div class="upload-steps">
+              <div class="step active">
+                <div class="circle">1</div>
+                <span>Overview</span>
+              </div>
+              <div class="step">
+                <div class="circle">2</div>
+                <span>Metadata Elements</span>
+              </div>
+              <div class="step">
+                <div class="circle">3</div>
+                <span>Publish Status</span>
+              </div>
+            </div>
+            <div class="upload-box">
+              <div class="upload-area-wrapper">
+                <div class="upload-area">
+                  <div class="upload-icon">&#8679;</div>
+                  <p class="upload-main-para">
+                    Drag and drop video files to upload
+                  </p>
+                  <p class="upload-small-para">
+                    Media content will be private until you publish them
+                  </p>
+                  <button>Select Files</button>
+                </div>
+                <div class="file-info">
+                  <p class="file-name">File Name: <span>batman.mp4</span></p>
+                  <p class="duration">
+                    Duration: <span>2:45:20</span> Quality: <span>FHD</span>
+                  </p>
+                  <p>Type:</p>
+                  <select>
+                    <option>Movie</option>
+                    <option>Series</option>
+                    <option>Short Film</option>
+                  </select>
+                </div>
+              </div>
+              <div class="metadata">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Movie Title" />
+                <label for="storyline">Storyline</label>
+                <textarea
+                  id="storyline"
+                  placeholder="Tell the story overview of the film"
+                ></textarea>
+                <label for="poster">Poster / Cover</label>
+                <div class="upload-poster">
+                  <div class="poster-upload-box">
+                    <div class="upload-icon">&#43;</div>
+                    <p>Upload Poster</p>
+                  </div>
+                  <div class="poster-preview"></div>
+                  <div class="poster-preview"></div>
+                </div>
+                <label for="genre">Genre</label>
+                <div class="genre-options">
+                  <button class="action-button">Action</button>
+                  <button>Comedy</button>
+                  <button>Drama</button>
+                  <button>Fantasy</button>
+                  <button>Mystery</button>
+                  <button>Thriller</button>
+                  <button>Romance</button>
+                  <button>History</button>
+                  <button>Horror</button>
+                  <button>Documental</button>
+                  <button>Sci-Fi</button>
+                  <button>Suspense</button>
+                </div>
+                <div class="button-container">
+                  <button class="next-button">Next →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
